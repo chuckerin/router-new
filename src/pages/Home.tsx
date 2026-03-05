@@ -2,7 +2,7 @@ const Home = () => {
   return (
     <div>
       <h1>Home</h1>
-      <p>Loading Indicator</p>
+      <p>Select Users from menu</p>
     </div>
   );
 };
