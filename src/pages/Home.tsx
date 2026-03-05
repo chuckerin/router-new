@@ -1,0 +1,10 @@
+const Home = () => {
+  return (
+    <div>
+      <h1>Home</h1>
+      <p>Loading Indicator</p>
+    </div>
+  );
+};
+
+export default Home;
