@@ -13,7 +13,10 @@ const Card = ({ user }: { user: User }) => {
   const { avatar, email, first_name, last_name, id } = user;
 
   return (
-    <div onClick={() => navigate(`/user/${id}`)} className='cardWrapper'>
+    <div
+      onClick={() => navigate(`/router-new/user/${id}`)}
+      className='cardWrapper'
+    >
       <h3>
         {first_name} {last_name}
       </h3>

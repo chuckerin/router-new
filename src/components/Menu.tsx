@@ -5,10 +5,10 @@ const Menu = () => {
     <nav className='navWrapper'>
       <ul className='navigasyonWrapper'>
         <li>
-          <NavLink to='/'>Home</NavLink>
+          <NavLink to='/router-new/'>Home</NavLink>
         </li>
         <li>
-          <NavLink to='/user'>Users</NavLink>
+          <NavLink to='/router-new/user'>Users</NavLink>
         </li>
       </ul>
     </nav>

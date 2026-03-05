@@ -12,9 +12,13 @@ const router = createBrowserRouter([
     element: <AppLayout />,
     errorElement: <Error />,
     children: [
-      { path: '/', element: <Home />, loader: async () => {} },
-      { path: '/user', element: <User />, loader: getEveryUser },
-      { path: '/user/:id', element: <UserDetail />, loader: getUserDetail },
+      { path: '/router-new/', element: <Home />, loader: async () => {} },
+      { path: '/router-new/user', element: <User />, loader: getEveryUser },
+      {
+        path: '/router-new/user/:id',
+        element: <UserDetail />,
+        loader: getUserDetail,
+      },
     ],
   },
 ]);
