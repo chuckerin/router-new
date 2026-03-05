@@ -1,5 +1,5 @@
 import { getSelectedUser } from '../services/apiUsers';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, type LoaderFunctionArgs } from 'react-router-dom';
 
 const UserDetail = () => {
   const xc = useLoaderData();
@@ -14,9 +14,15 @@ const UserDetail = () => {
 };
 
 // eslint-disable-next-line react-refresh/only-export-components
-export const loader = async ({ params }: { params: { id: string } }) => {
-  const userDetail = await getSelectedUser(params.id);
+export async function loader({ params }: LoaderFunctionArgs) {
+  const { id } = params;
+
+  if (!id) {
+    throw new Response('User id is required', { status: 400 });
+  }
+
+  const userDetail = await getSelectedUser(id);
   return userDetail;
-};
+}
 
 export default UserDetail;

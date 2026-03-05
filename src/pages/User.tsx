@@ -1,6 +1,7 @@
 import { useLoaderData } from 'react-router-dom';
 // import { getEveryUser } from '../services/apiUsers';
 import Card from '../components/Card';
+import type { Key } from 'react';
 
 const User = () => {
   const users = useLoaderData();
@@ -9,7 +10,7 @@ const User = () => {
   return (
     <div className='usersWrapper'>
       <h3>
-        {users?.data?.map((user, index) => (
+        {users?.data?.map((user: any, index: Key | null | undefined) => (
           <Card user={user} key={index} />
         ))}
       </h3>

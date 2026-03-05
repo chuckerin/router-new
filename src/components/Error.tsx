@@ -3,7 +3,7 @@ import error from '../images/404.jpeg';
 
 const Error = () => {
   const navigate = useNavigate();
-  const routeError = useRouteError();
+  const routeError = useRouteError() as { data?: string; message?: string };
   console.log(routeError);
 
   return (
